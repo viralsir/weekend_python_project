@@ -41,24 +41,24 @@ for no in range(1,101):
 #153  1.53
 no=int(input("Enter No:"))
 
+#
+#find armstrong no between 100 to 999
+print("division : ", no/100)
+print("Integer division :", no//100)
+print("module :", no%100)
+print(no**3)
 
-# find armstrong no between 100 to 999
-# print("division : ", no/100)
-# print("Integer division :", no//100)
-# print("module :", no%100)
-#print(no**3)
 
-
-first_digit=no//100;
-second_digit=(no//10)%10
-third_digit=no%10
-
-#sum=(first_digit*first_digit*first_digit)+(second_digit*second_digit*second_digit)+(third_digit*third_digit*third_digit)
-sum=first_digit**3 + second_digit**3 + third_digit**3
-if no==sum :
-    print(no," is a armstrong no")
-else:
-    print(no," is not a armstrong no")
+# first_digit=no//100;
+# second_digit=(no//10)%10
+# third_digit=no%10
+#
+# #sum=(first_digit*first_digit*first_digit)+(second_digit*second_digit*second_digit)+(third_digit*third_digit*third_digit)
+# sum=first_digit**3 + second_digit**3 + third_digit**3
+# if no==sum :
+#     print(no," is a armstrong no")
+# else:
+#     print(no," is not a armstrong no")
 
 
 
