@@ -1,34 +1,27 @@
-student_list=[[1,"vimal",23,34,44],[],[]]
-rollno=[]
-name=[]
-maths=[]
-sci=[]
-eng=[]
-
+student_list=[]
+subject=["Maths","Science","English"]
 for i in range(3):
-    rollno.append(int(input("Enter Roll No:")))
-    name.append(input("Enter Name:"))
-    marks=int(input("Enter Maths Marks:"))
-    while not 0<=marks<=100 :
-        marks=int(input("Enter Maths Marks:"))
-    maths.append(marks)
-    marks=int(input("Enter Science Marks:"))
-    while not 0<=marks<=100 :
-        marks=int(input("Enter Science Marks:"))
-    sci.append(marks)
-    marks=int(input("Enter English Marks:"))
-    while not 0 <= marks <= 100:
-        marks = int(input("Enter English Marks:"))
-    eng.append(marks)
+    student=[]
+    student.append(int(input("Enter Roll No:")))
+    student.append(input("Enter Name:"))
+    for index in range(len(subject)):
+        marks=int(input("Enter "+subject[index]+" Marks:"))
+        while not 0<=marks<=100 :
+            marks=int(input("Enter "+subject[index]+" Marks:"))
+        student.append(marks)
+    student_list.append(student)
+
 
 print("\n output :\n")
-for j in range(3):
-    print("Roll No:",rollno[j])
-    print("Name :",name[j])
-    print("Maths Marks:",maths[j])
-    print("Science Marks:",sci[j])
-    print("English Marks:",eng[j])
-    total=maths[j]+sci[j]+eng[j]
+for j in range(len(student_list)):
+
+    print("Roll No:",student_list[j][0])
+    print("Name :",student_list[j][1])
+    total=0
+    for index in range(2,len(student_list[j])):
+        print(subject[index-2]," Marks:",student_list[j][index])
+        total += student_list[j][index]
+
     print("total :",total)
 
 
