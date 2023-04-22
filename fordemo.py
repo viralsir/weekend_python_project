@@ -3,11 +3,7 @@
         syntax : for  element in range(start,end,step):
                         statement
 
-     0
-
-
-
-start=int(input("enter Stating no:"))
+   start=int(input("enter Stating no:"))
 end=int(input("Enter Ending no:"))
 for i in range(start,end,5):
     print(i)
