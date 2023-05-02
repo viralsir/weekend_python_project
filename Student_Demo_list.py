@@ -7,7 +7,8 @@ while option!=3 :
     print("\n\t\t\t Student corner \n")
     print("\t\t press 1 for Entry ")
     print("\t\t press 2 for View ")
-    print("\t\t press 3 for Exit")
+    print("\t\t press 3 for Pass/Fail")
+    print("\t\t press 4 for Exit")
 
     option=int(input("Enter option:"))
 
@@ -32,6 +33,12 @@ while option!=3 :
                 print(t,ele)
 
     elif option==3:
+         pass_list=[student for student in student_list if student[2]>35 and student[3]>35 and student[4]>35 and student[5]>35]
+         fail_list=[student for student in student_list if student[2]<35 or student[3]<35 or student[4]<35 or student[5]<35]
+         print("Pass Student List :",pass_list)
+         print("Fail Student List:",fail_list)
+
+    elif option==4:
         print("You are exited");
     else :
         print("Wrong option selected try again !")
